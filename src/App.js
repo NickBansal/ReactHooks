@@ -1,16 +1,12 @@
-import React, { Component } from "react";
-import "./App.css";
+import React from "react";
+import TodoList from "./TodoList";
 
-class App extends Component {
-  state = {};
-
-  render() {
-    return (
-      <div className="App">
-        <h1>Redux Tester</h1>
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div>
+      <TodoList />
+    </div>
+  );
+};
 
 export default App;
