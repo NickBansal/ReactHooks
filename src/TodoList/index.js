@@ -22,6 +22,22 @@ const Button = styled.button`
   font-size: 20px;
   border: 2px solid black;
   border-radius: 20px;
+  box-shadow: 1px 5px 2px black
+
+  &:hover {
+    cursor: pointer;
+    background: grey;
+    color: white;
+  }
+
+  &:active {
+    box-shadow: 1px 1px 1px black;
+    transform: translateY(4px);
+  }
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 const UL = styled.ul`
@@ -66,6 +82,8 @@ const TodoList = () => {
     setTodoList(newArray);
   };
 
+  const keyIdentifier = index => Math.random() * index;
+
   return (
     <MainDiv>
       <Input
@@ -82,7 +100,7 @@ const TodoList = () => {
           <LI
             delValue={item.delValue}
             onClick={() => handleDelete(item, index)}
-            key={Math.random() * index}
+            key={keyIdentifier(index)}
           >
             {item.name}
           </LI>
