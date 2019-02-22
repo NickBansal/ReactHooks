@@ -102,7 +102,7 @@ const TodoList = () => {
             onClick={() => handleDelete(item, index)}
             key={keyIdentifier(index)}
           >
-            {item.name}
+            - {item.name}
           </LI>
         ))}
       </UL>
